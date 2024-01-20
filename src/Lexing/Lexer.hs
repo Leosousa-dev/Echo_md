@@ -1,4 +1,4 @@
-module Lexing.Lexer where
+module Lexer where
 
 
     

@@ -1,1 +1,1 @@
-module Rendering.Render where
+module Render where

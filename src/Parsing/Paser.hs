@@ -1,1 +1,1 @@
-module Parsing.Paser where 
+module Paser where 
