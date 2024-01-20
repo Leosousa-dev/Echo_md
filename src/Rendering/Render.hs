@@ -1,1 +1,6 @@
-module Render where
+module Rendering.Render where
+
+
+
+    getModuleName :: String
+    getModuleName = "Render"
