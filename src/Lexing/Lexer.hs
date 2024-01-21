@@ -1,4 +1,4 @@
-module Lexing.Lexer where
+module Lexing.Lexer (getModuleName) where 
 
-
-    
+    getModuleName :: String
+    getModuleName = "Paser"
