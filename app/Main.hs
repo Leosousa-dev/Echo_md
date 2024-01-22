@@ -1,9 +1,12 @@
 module Main where
-import System.IO
+
+
+import Utils.Generalutils (readContent)
 
 main :: IO ()
 main =  do
-    print ""
+    content <- readContent "app/Main.hs"
+    putStrLn content
 
     -- read path for file
     -- putStrLn $ "Hello world" ++ par.getModuleName
@@ -13,9 +16,3 @@ main =  do
 
 
 
-readContent :: FilePath -> IO String
-readContent filePath = do
-    handle <- openFile filePath ReadMode
-    content <- hGetContents handle
-    hClose handle
-    return content
