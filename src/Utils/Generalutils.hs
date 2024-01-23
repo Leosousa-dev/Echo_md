@@ -1,8 +1,11 @@
 module Utils.Generalutils (readContent) where
 
+import Control.Exception
 
 
-readContent :: FilePath -> IO String
+readContent :: FilePath -> IO (Either String String)
 readContent filePath = do
-    content <- readFile filePath
-    return content
+    result <- try (readFile filePath)
+    return $ case result of 
+        Left ex -> Left $ "Error to read file" ++ show (ex :: SomeException)
+        Right content -> Right content

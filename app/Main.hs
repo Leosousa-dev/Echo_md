@@ -5,8 +5,11 @@ import Utils.Generalutils (readContent)
 
 main :: IO ()
 main =  do
-    content <- readContent "app/Main.hs"
-    putStrLn content
+    filePath <- getLine
+    result <-   readContent filePath
+    case result of
+        Left errMsg -> putStrLn errMsg
+        Right content -> putStrLn $ "content of file:\n" ++ content
 
 
 
