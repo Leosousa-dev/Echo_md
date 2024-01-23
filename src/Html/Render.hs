@@ -1,4 +1,4 @@
-module Rendering.Render (getModuleName) where
+module Html.Render (getModuleName) where
 
     getModuleName :: String
     getModuleName = "Render"

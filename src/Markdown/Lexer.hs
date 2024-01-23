@@ -1,4 +1,4 @@
-module Lexing.Lexer (getModuleName) where 
+module Markdown.Lexer (getModuleName) where 
 
     getModuleName :: String
     getModuleName = "Lexer"
